@@ -947,8 +947,8 @@
 			if (table.config.debug) {
 				time = new Date();
 			}
-			// loop through the visible rows
-			$("tr:visible", table.tBodies[0]).each(function(i){
+			 // loop through the visible rows + the children rows
+            		$("tr:visible, tr." + table.config.cssChildRow, table.tBodies[0]).each(function (i) {
 				$tr = $(this);
 				// style children rows the same way the parent row was styled
 				if (!$tr.hasClass(child)) { row++; }
